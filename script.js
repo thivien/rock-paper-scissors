@@ -4,13 +4,13 @@ function computerPlay() {
     const randomComputerMove = Math.floor(Math.random() * computerMoves.length);
     const computerMove = computerMoves[randomComputerMove]
     return computerMove;
-};
+}
 
 // Function, that defines game's logic
 function playRound(playerSelection, computerSelection) {
 
     // IF statement, that checks if player input is valid
-    // if (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors" || playerSelection !== "lizard" || playerSelection !== "spock") return `Please enter valid input. Valid inputs are 'rock, 'paper', 'scissors', 'lizard' or 'spock' without quotation marks.`
+    if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors" && playerSelection !== "lizard" && playerSelection !== "spock") return `Please enter valid input. Valid inputs are "rock", "paper", "scissors", "lizard" or "spock" without quotation marks.`
 
     // Player chooses rock
     if (playerSelection === "rock" && computerSelection === "rock") {
@@ -76,10 +76,15 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "spock" && computerSelection === "spock") {
         return `It's a tie, try again.`;
     }
-};
+}
 
-const playerSelection = prompt("Choose rock, paper, scissors, lizard or Spock:").toLowerCase();
-const computerSelection = computerPlay();
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("Choose rock, paper, scissors, lizard or Spock:").toLowerCase();
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(`you played: ${playerSelection}, computer played: ${computerSelection}`);
+    }
+}
 
-console.log(playRound(playerSelection, computerSelection));
-console.log(`${playerSelection} ${computerSelection}`);
+game();
