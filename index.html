@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Rock Paper Scissors</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="container">
+      <h1>Rock, paper, scissors, lizard and Spock</h1>
+      <div class="game-board">
+        <div class="player">
+          <div class="player-score"></div>
+          <h2 class="player-name">Player Name</h2>
+        </div>
+        <div class="vs">VS</div>
+        <div class="computer">
+          <div class="computer-score"></div>
+          <h2>Computer</h2>
+        </div>
+      </div>
+      <div class="game-result">Rock crushes lizard!</div>
+      <div class="player-input">
+        <ul>
+          <li>Rock</li>
+          <li>Paper</li>
+          <li>Scissors</li>
+          <li>Lizard</li>
+          <li>Spock</li>
+        </ul>
+      </div>
 
-    <script src="./script.js"></script>
-</body>
+      <div class="rules">
+        <span>+ show rules</span>
+        <ul>
+          <li>Scissors cuts paper.</li>
+          <li>Paper covers rock.</li>
+          <li>Rock crushes lizard.</li>
+          <li>Lizard poisons Spock.</li>
+          <li>Spock smashes scissors.</li>
+          <li>Scissors decapitates lizard.</li>
+          <li>Lizard eats paper.</li>
+          <li>Paper disproves Spock.</li>
+          <li>Spock vaporizes rock.</li>
+          <li>And as it always has, rock crushes scissors.</li>
+        </ul>
+      </div>
+    </div>
 
+    <script src="./js/script.js"></script>
+  </body>
 </html>
