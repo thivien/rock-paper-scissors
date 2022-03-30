@@ -10,8 +10,8 @@ const spock = document.querySelector("#spock");
 const resetBtn = document.createElement("div");
 
 // player name
-// const playerName = document.querySelector(".player-name");
-// playerName.textContent = prompt("Enter your name:");
+const playerName = document.querySelector(".player-name");
+playerName.textContent = prompt("Enter your name:");
 
 // Function, that returns random computer move
 function computerPlay() {
